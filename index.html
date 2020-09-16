@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cursor Redondo de Ratón sobre Menu</title>
+    <link rel="stylesheet" href="micss.css">
+
+</head>
+
+<body>
+    
+    <!-- Menu -->
+    <ul>
+        <li><a href="#">Television</a></li>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Internet Radio</a></li>
+        <li><a href="#">Email</a></li>
+
+        <!-- Cursor -->
+        <div class="cursor"></div>
+    </ul>
+
+
+    <script>
+        const cursor = document.querySelector(".cursor");
+
+        document.addEventListener("mousemove", event => {
+            /* 
+            event.pageX          
+            
+            https://developer.mozilla.org/es/docs/Web/API/UIEvent/pageX 
+            */
+            cursor.style.left = event.pageX + "px";
+
+
+            /* 
+            UIEvent.pageY
+            The UIEvent.pageY read-only property returns the vertical coordinate of the event relative to the whole document.
+
+            pageY is an integer value in pixels for the y-coordinate of the mouse pointer, relative to the whole document, when the mouse event fired. 
+            This property takes into account any vertical scrolling of the page.
+
+            https://developer.mozilla.org/es/docs/Web/API/UIEvent/pageY 
+            */
+            cursor.style.top = event.pageY + "px";
+        }); 
+    </script>
+
+
+
+</body>
+
+
+</html>
+
+
